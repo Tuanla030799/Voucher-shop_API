@@ -54,7 +54,7 @@ app.use("/api/summary", summaryRoutes);
 
 mongoose
   .connect(
-    "mongodb+srv://hieunguyen:Hieu2761998@cluster0.4f2ej.mongodb.net/NhomXanh?retryWrites=true&w=majority",
+    process.env.MONGO_URL,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
